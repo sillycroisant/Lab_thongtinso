@@ -1,0 +1,8 @@
+C?n g?p l?i khi khôi ph?c h?nh ?nh t? tín hi?u ðý?c nén l?i.
+S? fix l?i sau.
+S? bit c?n dùng ð? lýu tr? ?nh g?c : 3x8x250x250 = 1.500.000 bits
+S? bit c?n dùng ð? lýu tr? ?nh xám : 8x250x250 = 500.000 bits
+S? bit dùng ð? m? hóa ?nh xám b?ng runlength coding (8/8) : 54.864 bits
+S? bit dùng ð? m? hóa ?nh xám b?ng runlenght coding (8/1) : 30.861 bits
+
+ 
