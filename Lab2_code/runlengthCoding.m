@@ -1,9 +1,7 @@
 clc; close all; clearvars;
 
 %Input image
-name = 'test1.bmp';
-
-%Input RGB image
+name = 'nhom12a.bmp';
 im = imread(name);
 
 %Turn it into Grayscale image
@@ -46,18 +44,15 @@ for i=1:row
         end
     end
     code = [code, line];
-    postnumDec = 0;
-    for k=1:9:size(line,2)
+    for k=1:9:length(line)
         startPos = 1;
-        nownumDec = bin2dec(line(k:k+7));
+        endPos = startPos + bin2dec(line(k:k+7))-1;
         colr = bin2dec(polar1Bit8(line(k+8)));
-
-        encode(i,startPos:nownumDec) = colr;
-        postnumDec = nownumDec;
-        if(nownumDec == 250) break;
-        end
+        encode(i,startPos:endPos) = colr;
+        startPos = endPos;
     end
 end
+    
 
 figure; 
 subplot(121), imshow(bw), title('origin img');
